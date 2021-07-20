@@ -5,7 +5,7 @@ on:
 jobs:
   hello_world_job:
     runs-on: windows-latest
-    name: A job to say hello
+    name: Get CASL Library Version
     steps:
       - name: Get version from project file
         id: get-version
@@ -17,5 +17,5 @@ jobs:
           user-name: 'kinsondigital@gmail.com'
           password: ${{ secrets.REPO_PASSWORD }}
       # Use the output from the `get-version` step
-      - name: Get the output time
+      - name: Display Library Version
         run: echo "The project file version is ${{ steps.get-version.outputs.version }}"
