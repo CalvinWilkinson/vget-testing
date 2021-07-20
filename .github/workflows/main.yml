@@ -5,11 +5,15 @@ jobs:
     runs-on: windows-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: KinsonDigital/vget@v0.1
+      - name: Get version from project file
+        id: get-version
+        uses: KinsonDigital/vget@v0.2
         with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
+          repo-owner: 'KinsonDigital'
+          repo-name: 'vget-testing'
+          relative-file-path: 'CASL\CASL.csproj'
+          user-name: 'kinsondigital@gmail.com'
+          password: ${{ secrets.REPO_PASSWORD }}
+      # Use the output from the `get-version` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: echo "The project file version is ${{ steps.get-version.outputs.version }}"
