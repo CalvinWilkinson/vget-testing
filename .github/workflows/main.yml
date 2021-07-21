@@ -11,8 +11,7 @@ jobs:
         id: get-version
         uses: KinsonDigital/vget@v0.2
         with:
-          repo-owner: 'KinsonDigital'
-          repo-name: 'CASL'
+          repo-owner-and-name: 'KinsonDigital/CASL'
           relative-file-path: 'CASL\CASL.csproj'
           user-name: 'kinsondigital@gmail.com'
           password: ${{ secrets.REPO_PASSWORD }}
