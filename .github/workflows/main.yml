@@ -5,7 +5,7 @@ on:
 jobs:
   hello_world_job:
     runs-on: windows-latest
-    name: Get CASL Library Version
+    name: Get Project File Version
     steps:
       - name: Get version from project file
         id: get-version
@@ -13,10 +13,10 @@ jobs:
         with:
           repo-owner-and-name: 'CalvinWilkinson/vget-testing'
           branch: 'master'
-          relative-file-path: 'TestProjectFile.csproj'
+          relative-file-path: 'src\TestProjectFile.csproj'
           user-name: 'kinsondigital@gmail.com'
           password: ${{ secrets.REPO_PASSWORD }}
-          contains: '-preview.2'
+          contains: '.2.'
       # Use the output from the `get-version` step
       - name: Display Library Version
         run: echo "The project file version is ${{ steps.get-version.outputs.version }}"
