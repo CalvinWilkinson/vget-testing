@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>0.29.0-preview.2</Version>
+  </PropertyGroup>
+
+</Project>
