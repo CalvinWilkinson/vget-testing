@@ -11,9 +11,9 @@ jobs:
         id: get-version
         uses: KinsonDigital/vget@v0.2
         with:
-          repo-owner-and-name: 'KinsonDigital/CASL'
-          branch: 'develop'
-          relative-file-path: 'CASL\CASL.csproj'
+          repo-owner-and-name: 'CalvinWilkinson/vget-testing'
+          branch: 'master'
+          relative-file-path: 'TestProjectFile.csproj'
           user-name: 'kinsondigital@gmail.com'
           password: ${{ secrets.REPO_PASSWORD }}
       # Use the output from the `get-version` step
