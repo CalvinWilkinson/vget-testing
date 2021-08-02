@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Get version from project file
         id: get-version
-        uses: KinsonDigital/vget@v0.2
+        uses: KinsonDigital/vget@v0.3.0
         with:
           repo-owner-and-name: 'CalvinWilkinson/vget-testing'
           branch: 'master'
