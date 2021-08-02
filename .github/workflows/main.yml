@@ -16,6 +16,7 @@ jobs:
           relative-file-path: 'TestProjectFile.csproj'
           user-name: 'kinsondigital@gmail.com'
           password: ${{ secrets.REPO_PASSWORD }}
+          contains: '-preview.2'
       # Use the output from the `get-version` step
       - name: Display Library Version
         run: echo "The project file version is ${{ steps.get-version.outputs.version }}"
